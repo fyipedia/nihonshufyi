@@ -76,6 +76,8 @@ The tokutei meishoshu (special designation sake) system classifies premium sake 
 
 The "junmai" prefix means pure rice -- no distilled alcohol added. This does not inherently make it superior; small additions of brewer's alcohol can enhance aroma extraction and create lighter styles.
 
+Learn more: [Sake Grade System](https://nihonshufyi.com/grade/) · [Sake Encyclopedia](https://nihonshufyi.com/sake/)
+
 ### Rice Polishing (Seimaibuai)
 
 Polishing ratio (seimaibuai) is the percentage of the rice grain remaining after milling. The outer layers of rice contain proteins and fats that can produce off-flavors, so premium sake uses rice polished to remove these layers:
@@ -89,6 +91,8 @@ Polishing ratio (seimaibuai) is the percentage of the rice grain remaining after
 | 23% | 23% of grain remains | Extreme polishing (e.g., Dassai 23), technical showcase |
 
 Polishing from 70% to 50% removes approximately 40% more of the grain's mass, significantly increasing production cost and waste -- explaining the price premium of daiginjo-class sake.
+
+Learn more: [Rice Polishing Guide](https://nihonshufyi.com/rice/) · [Sake Glossary](https://nihonshufyi.com/glossary/)
 
 ### The Brewing Process
 
@@ -108,6 +112,8 @@ Sake brewing (jozo) is fundamentally different from beer or wine production. Key
 
 The parallel multiple fermentation is what makes sake unique: koji mold converts rice starch to sugar while yeast simultaneously converts that sugar to alcohol, achieving natural alcohol levels of 18-20% -- higher than any other fermented (not distilled) beverage.
 
+Learn more: [Brewing Process Guide](https://nihonshufyi.com/process/) · [Sake Guides](https://nihonshufyi.com/guide/)
+
 ### Sake Rice Varieties
 
 NihonshuFYI catalogs 10 sake-specific rice varieties (sakamai/shuzokotekimai). Sake rice differs from table rice: larger grains, prominent starch core (shinpaku), and lower protein content.
@@ -119,6 +125,8 @@ NihonshuFYI catalogs 10 sake-specific rice varieties (sakamai/shuzokotekimai). S
 | Miyama Nishiki | Nagano | Light, dry, cool-climate adapted | Masumi |
 | Omachi | Okayama | Oldest pure sake rice, rich, deep, umami | Takachiyo, specialty junmai |
 | Hattan Nishiki | Hiroshima | Soft water compatible, mild, balanced | Kamoizumi |
+
+Learn more: [Sake Rice Varieties](https://nihonshufyi.com/rice/) · [Brewery Profiles](https://nihonshufyi.com/brewery/)
 
 ### Key Sake Concepts
 
@@ -132,6 +140,8 @@ NihonshuFYI catalogs 10 sake-specific rice varieties (sakamai/shuzokotekimai). S
 | Koshu (Aged) | Aged sake, amber color, complex, nutty |
 | Nigori (Cloudy) | Coarsely filtered, creamy, sweet |
 | Toji | Master brewer, traditionally seasonal craftspeople |
+
+Learn more: [Sake Terminology](https://nihonshufyi.com/glossary/) · [Sake Comparison Tool](https://nihonshufyi.com/compare/)
 
 ## API Endpoints
 
