@@ -2,6 +2,10 @@
 
 Sake knowledge API client for developers — search sake grades, breweries, and terminology from [NihonshuFYI](https://nihonshufyi.com).
 
+<p align="center">
+  <img src="demo.gif" alt="nihonshufyi demo — sake API search and lookup" width="800">
+</p>
+
 ## Install
 
 ```bash
