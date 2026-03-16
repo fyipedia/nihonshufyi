@@ -1,6 +1,6 @@
 # nihonshufyi
 
-[![PyPI](https://img.shields.io/pypi/v/nihonshufyi)](https://pypi.org/project/nihonshufyi/)
+[![PyPI version](https://agentgif.com/badge/pypi/nihonshufyi/version.svg)](https://pypi.org/project/nihonshufyi/)
 [![Python](https://img.shields.io/pypi/pyversions/nihonshufyi)](https://pypi.org/project/nihonshufyi/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
