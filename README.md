@@ -75,7 +75,7 @@ The tokutei meishoshu (special designation sake) system classifies premium sake 
 
 The "junmai" prefix means pure rice -- no distilled alcohol added. This does not inherently make it superior; small additions of brewer's alcohol can enhance aroma extraction and create lighter styles.
 
-Learn more: [Sake Grade System](https://nihonshufyi.com/grade/) · [Sake Encyclopedia](https://nihonshufyi.com/sake/)
+Learn more: [Sake Grade System](https://nihonshufyi.com/grades/) · [Sake Encyclopedia](https://nihonshufyi.com/sake/)
 
 ### Rice Polishing (Seimaibuai)
 
@@ -111,7 +111,7 @@ Sake brewing (jozo) is fundamentally different from beer or wine production. Key
 
 The parallel multiple fermentation is what makes sake unique: koji mold converts rice starch to sugar while yeast simultaneously converts that sugar to alcohol, achieving natural alcohol levels of 18-20% -- higher than any other fermented (not distilled) beverage.
 
-Learn more: [Brewing Process Guide](https://nihonshufyi.com/process/) · [Sake Guides](https://nihonshufyi.com/guide/)
+Learn more: [Sake Guides](https://nihonshufyi.com/guides/)
 
 ### Sake Rice Varieties
 
@@ -125,7 +125,7 @@ NihonshuFYI catalogs 10 sake-specific rice varieties (sakamai/shuzokotekimai). S
 | Omachi | Okayama | Oldest pure sake rice, rich, deep, umami | Takachiyo, specialty junmai |
 | Hattan Nishiki | Hiroshima | Soft water compatible, mild, balanced | Kamoizumi |
 
-Learn more: [Sake Rice Varieties](https://nihonshufyi.com/rice/) · [Brewery Profiles](https://nihonshufyi.com/brewery/)
+Learn more: [Sake Rice Varieties](https://nihonshufyi.com/rice/) · [Brewery Profiles](https://nihonshufyi.com/breweries/)
 
 ### Key Sake Concepts
 
@@ -140,9 +140,7 @@ Learn more: [Sake Rice Varieties](https://nihonshufyi.com/rice/) · [Brewery Pro
 | Nigori (Cloudy) | Coarsely filtered, creamy, sweet |
 | Toji | Master brewer, traditionally seasonal craftspeople |
 
-Learn more: [Sake Terminology](https://nihonshufyi.com/glossary/) · [Sake Comparison Tool](https://nihonshufyi.com/compare/)
-
-## API Endpoints
+Learn more: [Sake Terminology](https://nihonshufyi.com/glossary/) · ## API Endpoints
 
 All endpoints are free, require no authentication, and return JSON with CORS enabled.
 
@@ -187,7 +185,7 @@ curl -s "https://nihonshufyi.com/api/v1/sake/dassai-23/"
 ```
 
 Full API documentation: [nihonshufyi.com/developers/](https://nihonshufyi.com/developers/).
-OpenAPI 3.1.0 spec: [nihonshufyi.com/api/v1/openapi.json](https://nihonshufyi.com/api/v1/openapi.json).
+OpenAPI 3.1.0 spec: .
 
 ## Command-Line Interface
 
@@ -253,10 +251,7 @@ with NihonshuFYI() as api:
 - **Reference**: [Sake Directory](https://nihonshufyi.com/sake/) | [Rice Varieties](https://nihonshufyi.com/rice/) | [Breweries](https://nihonshufyi.com/breweries/)
 - **Glossary**: [Sake Terminology](https://nihonshufyi.com/glossary/)
 - **Guides**: [Sake Guides](https://nihonshufyi.com/guides/)
-- **Compare**: [Sake Comparisons](https://nihonshufyi.com/compare/)
-- **API**: [Developer Docs](https://nihonshufyi.com/developers/) | [OpenAPI Spec](https://nihonshufyi.com/api/v1/openapi.json)
-
-## Beverage FYI Family
+- **Compare**: - **API**: [Developer Docs](https://nihonshufyi.com/developers/) | ## Beverage FYI Family
 
 Part of the [FYIPedia](https://fyipedia.com) open-source developer tools ecosystem -- world beverages from cocktails to sake.
 
