@@ -1,67 +1,88 @@
-"""MCP server for nihonshufyi — sake knowledge tools for AI assistants.
+"""MCP server for nihonshufyi — AI assistant tools for nihonshufyi.com.
 
-Requires the ``mcp`` extra: ``pip install nihonshufyi[mcp]``
-
-Run as a standalone server::
-
-    python -m nihonshufyi.mcp_server
-
-Or configure in ``claude_desktop_config.json``::
-
-    {
-        "mcpServers": {
-            "nihonshufyi": {
-                "command": "python",
-                "args": ["-m", "nihonshufyi.mcp_server"]
-            }
-        }
-    }
+Run: uvx --from "nihonshufyi[mcp]" python -m nihonshufyi.mcp_server
 """
-
 from __future__ import annotations
 
 from mcp.server.fastmcp import FastMCP
 
-mcp = FastMCP("nihonshufyi")
+mcp = FastMCP("NihonshuFYI")
 
 
 @mcp.tool()
-def sake_search(query: str) -> str:
-    """Search for sakes, breweries, and terminology on NihonshuFYI.
-
-    Search across sake grades (junmai, daiginjo, honjozo), breweries,
-    prefectures, rice varieties, yeast strains, serving temperatures,
-    and glossary terms.
+def list_sake(limit: int = 20, offset: int = 0) -> str:
+    """List sake from nihonshufyi.com.
 
     Args:
-        query: Search term (e.g. "junmai daiginjo", "niigata", "yamada nishiki").
+        limit: Maximum number of results. Default 20.
+        offset: Number of results to skip. Default 0.
     """
     from nihonshufyi.api import NihonshuFYI
 
     with NihonshuFYI() as api:
-        results = api.search(query)
+        data = api.list_sake(limit=limit, offset=offset)
+        results = data.get("results", data) if isinstance(data, dict) else data
+        if not results:
+            return "No sake found."
+        items = results[:limit] if isinstance(results, list) else []
+        return "\n".join(f"- {item.get('name', item.get('slug', '?'))}" for item in items)
 
-    items = results.get("results", [])
-    if not items:
-        return f"No results found for '{query}'."
 
-    lines = [
-        f"## Sake Search: {query}",
-        "",
-        f"Found {len(items)} result(s):",
-        "",
-        "| Type | Name | Detail |",
-        "|------|------|--------|",
-    ]
+@mcp.tool()
+def get_sake(slug: str) -> str:
+    """Get detailed information about a specific sake.
 
-    for item in items:
-        item_type = item.get("type", "unknown")
-        name = item.get("name", item.get("title", ""))
-        detail = item.get("description", item.get("slug", ""))
-        lines.append(f"| {item_type} | {name} | {detail} |")
+    Args:
+        slug: URL slug identifier for the sake.
+    """
+    from nihonshufyi.api import NihonshuFYI
 
-    return "\n".join(lines)
+    with NihonshuFYI() as api:
+        data = api.get_sake(slug)
+        return str(data)
+
+
+@mcp.tool()
+def list_breweries(limit: int = 20, offset: int = 0) -> str:
+    """List breweries from nihonshufyi.com.
+
+    Args:
+        limit: Maximum number of results. Default 20.
+        offset: Number of results to skip. Default 0.
+    """
+    from nihonshufyi.api import NihonshuFYI
+
+    with NihonshuFYI() as api:
+        data = api.list_breweries(limit=limit, offset=offset)
+        results = data.get("results", data) if isinstance(data, dict) else data
+        if not results:
+            return "No breweries found."
+        items = results[:limit] if isinstance(results, list) else []
+        return "\n".join(f"- {item.get('name', item.get('slug', '?'))}" for item in items)
+
+
+@mcp.tool()
+def search_nihonshu(query: str) -> str:
+    """Search nihonshufyi.com for sake, breweries, rice varieties, and grades.
+
+    Args:
+        query: Search query string.
+    """
+    from nihonshufyi.api import NihonshuFYI
+
+    with NihonshuFYI() as api:
+        data = api.search(query)
+        results = data.get("results", data) if isinstance(data, dict) else data
+        if not results:
+            return f"No results found for \"{query}\"."
+        items = results[:10] if isinstance(results, list) else []
+        return "\n".join(f"- {item.get('name', item.get('slug', '?'))}" for item in items)
+
+
+def main() -> None:
+    """Run the MCP server."""
+    mcp.run()
 
 
 if __name__ == "__main__":
-    mcp.run()
+    main()

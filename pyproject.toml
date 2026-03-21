@@ -1,6 +1,6 @@
 [project]
 name = "nihonshufyi"
-version = "0.1.2"
+version = "0.1.3"
 description = "Sake knowledge API client — search sake grades, breweries, and terms from NihonshuFYI."
 readme = "README.md"
 license = "MIT"
@@ -42,6 +42,7 @@ all = ["nihonshufyi[api,cli,mcp]"]
 
 [project.scripts]
 nihonshufyi = "nihonshufyi.cli:app"
+nihonshufyi-mcp = "nihonshufyi.mcp_server:main"
 
 [project.entry-points."mcp.servers"]
 nihonshufyi = "nihonshufyi.mcp_server:mcp"
