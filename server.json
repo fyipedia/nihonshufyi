@@ -1,0 +1,41 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.fyipedia/nihonshufyi",
+  "description": "Sake knowledge API client — search sake grades, breweries, and terms from NihonshuFYI.",
+  "version": "0.1.4",
+  "repository": {
+    "url": "https://github.com/fyipedia/nihonshufyi",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "registryBaseUrl": "https://pypi.org",
+      "identifier": "nihonshufyi",
+      "version": "0.1.4",
+      "runtimeHint": "uvx",
+      "transport": {
+        "type": "stdio"
+      },
+      "runtimeArguments": [
+        {
+          "type": "named",
+          "name": "--from",
+          "value": "nihonshufyi[mcp]"
+        },
+        {
+          "type": "positional",
+          "value": "python"
+        },
+        {
+          "type": "positional",
+          "value": "-m"
+        },
+        {
+          "type": "positional",
+          "value": "nihonshufyi.mcp_server"
+        }
+      ]
+    }
+  ]
+}
